@@ -23,7 +23,7 @@ app.use(function(req, res, next) {
 
 app.get("/", (req, res) => {
   let { term = "Simon Garfunkel" } = req.query;
-  const url = `https://itunes.apple.com/search?term=${term}`;
+  const url = `https://itunes.apple.com/search?term=${term}&media=music`;
   console.log(url);
   request(url, (error, response, body) => {
     res.json(response);
