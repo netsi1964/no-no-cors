@@ -6,14 +6,16 @@ const app = express();
 var port = process.env.PORT || 3000;
 
 app.use(function(req, res, next) {
-  const host = req.get("host");
-  console.log(`Incomming request from: ${host}`);
-  if (host.includes(`localhost:${port}`) || host.includes("cdpn.io")) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
+  const origin = req.get("origin");
+  console.log(`Incomming request from: ${origin}`);
+  if (typeof origin !== "undefined") {
+    if (origin.includes(`localhost:${port}`) || origin.includes("cdpn.io")) {
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+      );
+    }
   }
 
   next();
