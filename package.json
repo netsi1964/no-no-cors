@@ -1,0 +1,26 @@
+{
+  "name": "no-no-cors",
+  "version": "1.0.0",
+  "description": "Expose endpoint which serves as a proxy",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netsi1964/no-no-cors.git"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "Sten Hougaard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netsi1964/no-no-cors/issues"
+  },
+  "homepage": "https://github.com/netsi1964/no-no-cors#readme",
+  "dependencies": {
+    "express": "4.17.1",
+    "request": "2.88.0"
+  }
+}
