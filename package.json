@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/netsi1964/no-no-cors#readme",
   "dependencies": {
-    "express": "4.17.1",
+    "express": "4.17.3",
     "request": "2.88.0"
   }
 }
